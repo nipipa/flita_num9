@@ -21,7 +21,6 @@ int main()
       }
     }
   }
-  char u;
   fclose(file);
   file = fopen("graf.gv", "w");
   fprintf(file, "graph grath {\n");
@@ -31,16 +30,16 @@ int main()
   }
   for (int a = 0; a < 16; a++)
   {
-    u = -1;
+    s = -1;
     for (int y = 0; y < 5; y++)
     {
       if (arr[y][a] != '0')
       {
-        if (u == -1)
+        if (s == -1)
         {
           fprintf(file, "%d", y + 1);
           printf("%d", y + 1);
-          u = 0;
+          s = 0;
         }
         else
         {
